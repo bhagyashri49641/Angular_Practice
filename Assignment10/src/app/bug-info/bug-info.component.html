@@ -1,0 +1,23 @@
+<form class="example-form">
+
+    <p>Detailed explaination of Bug*</p>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Message</mat-label>
+      <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
+      <mat-hint align="start"><strong></strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    
+  </form><br>
+
+  <br><br><br>
+  <p>Date and time you first noticed this bug*</p>
+  <form class="row row-cols-sm-auto">
+    <div class="col-12">
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+      </div>
+    </div>
+  </form><br><br><br>
